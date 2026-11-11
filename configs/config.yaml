@@ -1,0 +1,77 @@
+
+paths:
+  model_path: "models/best.pt"
+  input_dir: "input"
+  output_dir: "output"
+  sam2_checkpoint: "models/sam2.1_hiera_base_plus.pt"
+  sam2_config: "models/sam2.1_hiera_b+.yaml"
+
+yolo:
+  device: ""            
+  conf: 0.25
+  nms_iou: 0.70
+  imgsz: 1024
+
+
+classes:
+  surface: "artwork_surface"
+  canvas_edge: "canvas_edge"
+  frame: "frame"
+  mat: "mat"
+
+sam2:
+  enabled: true
+  box_expand: 0.03       
+  min_iou: 0.65          
+  n_points: 4            
+  max_grow_frac: 0.05    
+
+refine:
+  grabcut_enabled: true
+  grabcut_band_frac: 0.02
+  grabcut_iters: 4
+  grabcut_max_side: 1000
+
+content:
+  enabled: true
+  sat_otsu_blend: 0.5    
+  edge_lo: 30           
+  edge_hi: 100          
+  region_dilate_frac: 0.15   
+  min_content_ratio: 0.25    
+  max_content_ratio: 0.98    
+  min_support_gain: 0.05     
+geometry:
+  quad_iou_exact: 0.96
+  quad_iou_rough: 0.88
+  ellipse_iou_min: 0.85
+  natural_poly_eps_frac: 0.008
+
+  # --- edge snapping ---
+  snap_edges: true
+  snap_band_frac: 0.006
+  snap_min_grad: 3.0
+
+  # --- warp / alpha ---
+  warp_max_px: 40000000
+  edge_inset_px: 0.0
+  feather_sigma: 0.8
+
+  w_boundary: 0.45       
+  w_agreement: 0.30      
+  w_area: 0.15           
+  w_regularity: 0.10    
+output:
+  jpeg_quality: 98
+  pad_frac: 0.01
+  exts:
+    - ".jpg"
+    - ".jpeg"
+    - ".png"
+    - ".bmp"
+    - ".tiff"
+    - ".tif"
+    - ".webp"
+    - ".heic"
+    - ".heif"
+    - ".avif"

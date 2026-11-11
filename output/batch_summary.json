@@ -1,0 +1,466 @@
+{
+  "config": {
+    "paths": {
+      "model_path": "models/best.pt",
+      "input_dir": "input",
+      "output_dir": "output",
+      "sam2_checkpoint": "models/sam2.1_hiera_base_plus.pt",
+      "sam2_config": "models/sam2.1_hiera_b+.yaml"
+    },
+    "yolo": {
+      "device": "",
+      "conf": 0.25,
+      "nms_iou": 0.7,
+      "imgsz": 1024
+    },
+    "classes": {
+      "surface": "artwork_surface",
+      "canvas_edge": "canvas_edge",
+      "frame": "frame",
+      "mat": "mat"
+    },
+    "sam2": {
+      "enabled": true,
+      "box_expand": 0.03,
+      "min_iou": 0.65,
+      "n_points": 4,
+      "max_grow_frac": 0.05
+    },
+    "refine": {
+      "grabcut_enabled": true,
+      "grabcut_band_frac": 0.02,
+      "grabcut_iters": 4,
+      "grabcut_max_side": 1000
+    },
+    "content": {
+      "enabled": true,
+      "sat_otsu_blend": 0.5,
+      "edge_lo": 30,
+      "edge_hi": 100,
+      "region_dilate_frac": 0.15,
+      "min_content_ratio": 0.25,
+      "max_content_ratio": 0.98,
+      "min_support_gain": 0.05
+    },
+    "geometry": {
+      "quad_iou_exact": 0.96,
+      "quad_iou_rough": 0.88,
+      "ellipse_iou_min": 0.85,
+      "natural_poly_eps_frac": 0.008,
+      "snap_edges": true,
+      "snap_band_frac": 0.006,
+      "snap_min_grad": 3.0,
+      "warp_max_px": 40000000,
+      "edge_inset_px": 0.0,
+      "feather_sigma": 0.8,
+      "w_boundary": 0.45,
+      "w_agreement": 0.3,
+      "w_area": 0.15,
+      "w_regularity": 0.1
+    },
+    "output": {
+      "jpeg_quality": 98,
+      "pad_frac": 0.01,
+      "exts": [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".bmp",
+        ".tiff",
+        ".tif",
+        ".webp",
+        ".heic",
+        ".heif",
+        ".avif"
+      ]
+    }
+  },
+  "n_images": 39,
+  "n_paintings": 42,
+  "avg_time_per_image_s": 4.31,
+  "status_counts": {
+    "success": 24,
+    "needs_review": 18,
+    "failed": 0
+  },
+  "rows": [
+    {
+      "image": "cosmos_1068288353.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface_frame:aspect_fallback_edge_lengths",
+      "seconds": 1.93
+    },
+    {
+      "image": "cosmos_1068288353.webp",
+      "painting": "painting_02",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths;artwork_surface_frame:aspect_fallback_edge_lengths",
+      "seconds": 1.65
+    },
+    {
+      "image": "cosmos_1164837729.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 0.99
+    },
+    {
+      "image": "cosmos_1304303736.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 3.21
+    },
+    {
+      "image": "cosmos_1332125198.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_mat;artwork_surface_mat_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface_mat:aspect_fallback_edge_lengths",
+      "seconds": 7.67
+    },
+    {
+      "image": "cosmos_1361293000.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 2.14
+    },
+    {
+      "image": "cosmos_1368919235.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 3.03
+    },
+    {
+      "image": "cosmos_1377410746.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 3.21
+    },
+    {
+      "image": "cosmos_1438472328.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 1.35
+    },
+    {
+      "image": "cosmos_1445489813.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 0.48
+    },
+    {
+      "image": "cosmos_1468232497.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface_frame:aspect_fallback_edge_lengths",
+      "seconds": 7.05
+    },
+    {
+      "image": "cosmos_1526908251.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 0.42
+    },
+    {
+      "image": "cosmos_1563723881.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_mat;artwork_surface_mat_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface_mat:aspect_fallback_edge_lengths;artwork_surface_mat_frame:aspect_fallback_edge_lengths",
+      "seconds": 9.49
+    },
+    {
+      "image": "cosmos_161318758.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 5.73
+    },
+    {
+      "image": "cosmos_1647852982.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths;artwork_surface_frame:aspect_fallback_edge_lengths",
+      "seconds": 0.73
+    },
+    {
+      "image": "cosmos_1702382228.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "smoothed",
+      "flags": "",
+      "seconds": 1.8
+    },
+    {
+      "image": "cosmos_1712972561.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_mat;artwork_surface_mat_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 3.8
+    },
+    {
+      "image": "cosmos_1770266140.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 2.94
+    },
+    {
+      "image": "cosmos_1817123541.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 0.44
+    },
+    {
+      "image": "cosmos_1817123541.webp",
+      "painting": "painting_02",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths;artwork_surface_frame:aspect_fallback_edge_lengths",
+      "seconds": 0.47
+    },
+    {
+      "image": "cosmos_1950763763.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 2.72
+    },
+    {
+      "image": "cosmos_2025077832.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_mat;artwork_surface_mat_frame",
+      "chosen_shape": "smoothed",
+      "flags": "used_content_mask_for_white_on_white;artwork_surface_mat:aspect_fallback_edge_lengths;artwork_surface_mat_frame:aspect_fallback_edge_lengths",
+      "seconds": 0.7
+    },
+    {
+      "image": "cosmos_2079201075.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "smoothed",
+      "flags": "used_content_mask_for_white_on_white",
+      "seconds": 2.21
+    },
+    {
+      "image": "cosmos_2082106920.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 2.14
+    },
+    {
+      "image": "cosmos_2098004202.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 5.25
+    },
+    {
+      "image": "cosmos_242197895.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "smoothed",
+      "flags": "",
+      "seconds": 2.53
+    },
+    {
+      "image": "cosmos_369919440.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 0.75
+    },
+    {
+      "image": "cosmos_402997348.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 2.69
+    },
+    {
+      "image": "cosmos_422326691.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 1.79
+    },
+    {
+      "image": "cosmos_450089401.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 1.18
+    },
+    {
+      "image": "cosmos_507247667.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 0.77
+    },
+    {
+      "image": "cosmos_508735338.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 1.38
+    },
+    {
+      "image": "cosmos_767782416.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 3.04
+    },
+    {
+      "image": "cosmos_818493802.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 0.65
+    },
+    {
+      "image": "cosmos_937311948.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths",
+      "seconds": 0.86
+    },
+    {
+      "image": "cosmos_949715381.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 2.53
+    },
+    {
+      "image": "cosmos_964919418.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 1.49
+    },
+    {
+      "image": "cosmos_97487556.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 0.93
+    },
+    {
+      "image": "cosmos_975664263.webp",
+      "painting": "painting_01",
+      "status": "needs_review",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "artwork_surface:aspect_fallback_edge_lengths;artwork_surface_frame:aspect_fallback_edge_lengths",
+      "seconds": 0.26
+    },
+    {
+      "image": "cosmos_975664263.webp",
+      "painting": "painting_02",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 0.47
+    },
+    {
+      "image": "cosmos_976199721.webp",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface;artwork_surface_frame",
+      "chosen_shape": "quad",
+      "flags": "",
+      "seconds": 1.59
+    },
+    {
+      "image": "Screenshot 2026-10-27 181352.png",
+      "painting": "painting_01",
+      "status": "success",
+      "variants": "artwork_surface",
+      "chosen_shape": "ellipse",
+      "flags": "",
+      "seconds": 0.61
+    }
+  ]
+}

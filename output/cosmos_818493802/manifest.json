@@ -1,0 +1,47 @@
+{
+  "input": "cosmos_818493802.webp",
+  "size": [
+    736,
+    1104
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.9423488974571228,
+      "status": "success",
+      "flags": [],
+      "info": {
+        "content_mask_ratio": 0.34,
+        "content_support_yolo": 0.313,
+        "content_support_content": 0.139,
+        "surface_area_px": 65972,
+        "variants_emitted": [
+          "artwork_surface",
+          "artwork_surface_frame"
+        ],
+        "artwork_surface_hypotheses": {
+          "ellipse": 0.6867,
+          "natural_polygon": 0.612,
+          "smoothed": 0.62,
+          "raw": 0.5907
+        },
+        "artwork_surface_chosen": "ellipse",
+        "artwork_surface_frame_hypotheses": {
+          "ellipse": 0.7111,
+          "natural_polygon": 0.6589,
+          "smoothed": 0.6444,
+          "raw": 0.6146
+        },
+        "artwork_surface_frame_chosen": "ellipse"
+      },
+      "files": [
+        "output\\cosmos_818493802\\painting_01\\artwork_surface_transparent.png",
+        "output\\cosmos_818493802\\painting_01\\artwork_surface_white_preview.jpg",
+        "output\\cosmos_818493802\\painting_01\\artwork_surface_frame_transparent.png",
+        "output\\cosmos_818493802\\painting_01\\artwork_surface_frame_white_preview.jpg"
+      ],
+      "seconds": 0.65
+    }
+  ]
+}

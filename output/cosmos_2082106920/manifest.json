@@ -1,0 +1,86 @@
+{
+  "input": "cosmos_2082106920.webp",
+  "size": [
+    1000,
+    1333
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.9531998634338379,
+      "status": "success",
+      "flags": [],
+      "info": {
+        "content_mask_ratio": 0.311,
+        "content_support_yolo": 0.705,
+        "content_support_content": 0.156,
+        "surface_area_px": 814325,
+        "variants_emitted": [
+          "artwork_surface"
+        ],
+        "artwork_surface_hypotheses": {
+          "quad": 0.8648,
+          "ellipse": 0.536,
+          "natural_polygon": 0.8027,
+          "smoothed": 0.797,
+          "raw": 0.767
+        },
+        "artwork_surface_chosen": "quad",
+        "artwork_surface_snap": [
+          {
+            "side": 0,
+            "shift_px": 0.87,
+            "applied": true
+          },
+          {
+            "side": 1,
+            "shift_px": 0.09,
+            "applied": true
+          },
+          {
+            "side": 2,
+            "shift_px": -0.07,
+            "applied": true
+          },
+          {
+            "side": 3,
+            "shift_px": 0.68,
+            "applied": true
+          }
+        ],
+        "artwork_surface_aspect_method": "zhang_he",
+        "artwork_surface_warp": {
+          "output_size": [
+            772,
+            1068
+          ],
+          "corners_xy": [
+            [
+              117.14004516601562,
+              155.1890869140625
+            ],
+            [
+              888.7377319335938,
+              139.21319580078125
+            ],
+            [
+              897.1146850585938,
+              1208.9344482421875
+            ],
+            [
+              135.4217529296875,
+              1208.9344482421875
+            ]
+          ],
+          "aspect_ratio": 0.7225
+        }
+      },
+      "files": [
+        "output\\cosmos_2082106920\\painting_01\\artwork_surface_transparent.png",
+        "output\\cosmos_2082106920\\painting_01\\artwork_surface_white_preview.jpg"
+      ],
+      "seconds": 2.14
+    }
+  ]
+}

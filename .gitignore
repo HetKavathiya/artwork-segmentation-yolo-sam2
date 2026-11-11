@@ -1,0 +1,9 @@
+*.pt
+*.pth
+*.onnx
+__pycache__/
+.venv/
+runs/
+datasets/
+*.zip
+.ipynb_checkpoints/

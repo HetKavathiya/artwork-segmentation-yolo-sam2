@@ -1,0 +1,85 @@
+{
+  "input": "cosmos_369919440.webp",
+  "size": [
+    500,
+    500
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.8151239156723022,
+      "status": "needs_review",
+      "flags": [
+        "artwork_surface:aspect_fallback_edge_lengths"
+      ],
+      "info": {
+        "surface_area_px": 138856,
+        "variants_emitted": [
+          "artwork_surface"
+        ],
+        "artwork_surface_hypotheses": {
+          "quad": 0.5762,
+          "ellipse": 0.5002,
+          "natural_polygon": 0.5216,
+          "smoothed": 0.5097,
+          "raw": 0.4798
+        },
+        "artwork_surface_chosen": "quad",
+        "artwork_surface_snap": [
+          {
+            "side": 0,
+            "shift_px": 0.0,
+            "applied": false
+          },
+          {
+            "side": 1,
+            "shift_px": 0.0,
+            "applied": false
+          },
+          {
+            "side": 2,
+            "shift_px": 0.0,
+            "applied": true
+          },
+          {
+            "side": 3,
+            "shift_px": 0.41,
+            "applied": true
+          }
+        ],
+        "artwork_surface_aspect_method": "edge_lengths",
+        "artwork_surface_warp": {
+          "output_size": [
+            319,
+            443
+          ],
+          "corners_xy": [
+            [
+              74.52255249023438,
+              38.9044189453125
+            ],
+            [
+              393.0,
+              26.92225456237793
+            ],
+            [
+              393.0,
+              469.9132080078125
+            ],
+            [
+              77.56381225585938,
+              470.35638427734375
+            ]
+          ],
+          "aspect_ratio": 0.7194
+        }
+      },
+      "files": [
+        "output\\cosmos_369919440\\painting_01\\artwork_surface_transparent.png",
+        "output\\cosmos_369919440\\painting_01\\artwork_surface_white_preview.jpg"
+      ],
+      "seconds": 0.75
+    }
+  ]
+}

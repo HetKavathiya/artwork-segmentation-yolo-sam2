@@ -1,0 +1,142 @@
+{
+  "input": "cosmos_976199721.webp",
+  "size": [
+    1067,
+    1422
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.9738864302635193,
+      "status": "success",
+      "flags": [],
+      "info": {
+        "surface_area_px": 308037,
+        "variants_emitted": [
+          "artwork_surface",
+          "artwork_surface_frame"
+        ],
+        "artwork_surface_hypotheses": {
+          "quad": 0.6962,
+          "ellipse": 0.5042,
+          "natural_polygon": 0.6459,
+          "smoothed": 0.6274,
+          "raw": 0.5974
+        },
+        "artwork_surface_chosen": "quad",
+        "artwork_surface_snap": [
+          {
+            "side": 0,
+            "shift_px": 0.87,
+            "applied": true
+          },
+          {
+            "side": 1,
+            "shift_px": 0.59,
+            "applied": true
+          },
+          {
+            "side": 2,
+            "shift_px": 0.83,
+            "applied": true
+          },
+          {
+            "side": 3,
+            "shift_px": 0.54,
+            "applied": true
+          }
+        ],
+        "artwork_surface_aspect_method": "zhang_he",
+        "artwork_surface_warp": {
+          "output_size": [
+            446,
+            628
+          ],
+          "corners_xy": [
+            [
+              394.8031311035156,
+              516.156005859375
+            ],
+            [
+              834.6508178710938,
+              511.8952941894531
+            ],
+            [
+              797.0025634765625,
+              1247.65478515625
+            ],
+            [
+              357.0120849609375,
+              1177.169677734375
+            ]
+          ],
+          "aspect_ratio": 0.7096
+        },
+        "artwork_surface_frame_hypotheses": {
+          "quad": 0.697,
+          "ellipse": 0.5052,
+          "natural_polygon": 0.6455,
+          "smoothed": 0.6283,
+          "raw": 0.5983
+        },
+        "artwork_surface_frame_chosen": "quad",
+        "artwork_surface_frame_snap": [
+          {
+            "side": 0,
+            "shift_px": 2.46,
+            "applied": true
+          },
+          {
+            "side": 1,
+            "shift_px": -0.56,
+            "applied": true
+          },
+          {
+            "side": 2,
+            "shift_px": -1.32,
+            "applied": true
+          },
+          {
+            "side": 3,
+            "shift_px": -1.11,
+            "applied": true
+          }
+        ],
+        "artwork_surface_frame_aspect_method": "zhang_he",
+        "artwork_surface_frame_warp": {
+          "output_size": [
+            468,
+            687
+          ],
+          "corners_xy": [
+            [
+              383.5700378417969,
+              500.53515625
+            ],
+            [
+              846.069091796875,
+              500.53515625
+            ],
+            [
+              806.56103515625,
+              1261.2752685546875
+            ],
+            [
+              344.60205078125,
+              1186.43603515625
+            ]
+          ],
+          "aspect_ratio": 0.6817
+        }
+      },
+      "files": [
+        "output\\cosmos_976199721\\painting_01\\artwork_surface_transparent.png",
+        "output\\cosmos_976199721\\painting_01\\artwork_surface_white_preview.jpg",
+        "output\\cosmos_976199721\\painting_01\\artwork_surface_frame_transparent.png",
+        "output\\cosmos_976199721\\painting_01\\artwork_surface_frame_white_preview.jpg"
+      ],
+      "seconds": 1.59
+    }
+  ]
+}

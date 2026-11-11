@@ -1,0 +1,85 @@
+{
+  "input": "cosmos_1770266140.webp",
+  "size": [
+    1440,
+    1920
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.953719973564148,
+      "status": "needs_review",
+      "flags": [
+        "artwork_surface:aspect_fallback_edge_lengths"
+      ],
+      "info": {
+        "surface_area_px": 1182962,
+        "variants_emitted": [
+          "artwork_surface"
+        ],
+        "artwork_surface_hypotheses": {
+          "quad": 0.7941,
+          "ellipse": 0.5166,
+          "natural_polygon": 0.7434,
+          "smoothed": 0.7238,
+          "raw": 0.6932
+        },
+        "artwork_surface_chosen": "quad",
+        "artwork_surface_snap": [
+          {
+            "side": 0,
+            "shift_px": 0.39,
+            "applied": true
+          },
+          {
+            "side": 1,
+            "shift_px": -0.47,
+            "applied": true
+          },
+          {
+            "side": 2,
+            "shift_px": 0.81,
+            "applied": true
+          },
+          {
+            "side": 3,
+            "shift_px": 1.41,
+            "applied": true
+          }
+        ],
+        "artwork_surface_aspect_method": "edge_lengths",
+        "artwork_surface_warp": {
+          "output_size": [
+            949,
+            1267
+          ],
+          "corners_xy": [
+            [
+              210.18475341796875,
+              552.3341064453125
+            ],
+            [
+              1146.6968994140625,
+              540.4491577148438
+            ],
+            [
+              1169.9410400390625,
+              1787.25537109375
+            ],
+            [
+              221.78204345703125,
+              1818.9869384765625
+            ]
+          ],
+          "aspect_ratio": 0.7489
+        }
+      },
+      "files": [
+        "output\\cosmos_1770266140\\painting_01\\artwork_surface_transparent.png",
+        "output\\cosmos_1770266140\\painting_01\\artwork_surface_white_preview.jpg"
+      ],
+      "seconds": 2.94
+    }
+  ]
+}

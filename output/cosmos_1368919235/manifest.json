@@ -1,0 +1,88 @@
+{
+  "input": "cosmos_1368919235.webp",
+  "size": [
+    1396,
+    1695
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.9451673626899719,
+      "status": "needs_review",
+      "flags": [
+        "artwork_surface:aspect_fallback_edge_lengths"
+      ],
+      "info": {
+        "content_mask_ratio": 0.896,
+        "content_support_yolo": 0.609,
+        "content_support_content": 0.636,
+        "surface_area_px": 792059,
+        "variants_emitted": [
+          "artwork_surface"
+        ],
+        "artwork_surface_hypotheses": {
+          "quad": 0.781,
+          "ellipse": 0.5816,
+          "natural_polygon": 0.7436,
+          "smoothed": 0.751,
+          "raw": 0.7239
+        },
+        "artwork_surface_chosen": "quad",
+        "artwork_surface_snap": [
+          {
+            "side": 0,
+            "shift_px": 0.84,
+            "applied": true
+          },
+          {
+            "side": 1,
+            "shift_px": 0.0,
+            "applied": false
+          },
+          {
+            "side": 2,
+            "shift_px": 0.0,
+            "applied": false
+          },
+          {
+            "side": 3,
+            "shift_px": 0.0,
+            "applied": false
+          }
+        ],
+        "artwork_surface_aspect_method": "edge_lengths",
+        "artwork_surface_warp": {
+          "output_size": [
+            622,
+            1285
+          ],
+          "corners_xy": [
+            [
+              416.40704345703125,
+              131.87158203125
+            ],
+            [
+              1027.050048828125,
+              132.75303649902344
+            ],
+            [
+              1035.0599365234375,
+              1417.3330078125
+            ],
+            [
+              413.350830078125,
+              1409.7470703125
+            ]
+          ],
+          "aspect_ratio": 0.484
+        }
+      },
+      "files": [
+        "output\\cosmos_1368919235\\painting_01\\artwork_surface_transparent.png",
+        "output\\cosmos_1368919235\\painting_01\\artwork_surface_white_preview.jpg"
+      ],
+      "seconds": 3.03
+    }
+  ]
+}

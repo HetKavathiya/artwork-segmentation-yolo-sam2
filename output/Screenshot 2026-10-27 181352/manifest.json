@@ -1,0 +1,37 @@
+{
+  "input": "Screenshot 2026-10-27 181352.png",
+  "size": [
+    565,
+    808
+  ],
+  "n_paintings": 1,
+  "paintings": [
+    {
+      "painting": "painting_01",
+      "yolo_confidence": 0.9465839266777039,
+      "status": "success",
+      "flags": [],
+      "info": {
+        "content_mask_ratio": 0.564,
+        "content_support_yolo": 0.598,
+        "content_support_content": 0.295,
+        "surface_area_px": 164100,
+        "variants_emitted": [
+          "artwork_surface"
+        ],
+        "artwork_surface_hypotheses": {
+          "ellipse": 0.7823,
+          "natural_polygon": 0.6784,
+          "smoothed": 0.7145,
+          "raw": 0.6842
+        },
+        "artwork_surface_chosen": "ellipse"
+      },
+      "files": [
+        "output\\Screenshot 2026-10-27 181352\\painting_01\\artwork_surface_transparent.png",
+        "output\\Screenshot 2026-10-27 181352\\painting_01\\artwork_surface_white_preview.jpg"
+      ],
+      "seconds": 0.61
+    }
+  ]
+}
