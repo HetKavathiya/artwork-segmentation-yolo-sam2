@@ -69,7 +69,6 @@ python src/pipeline.py --model weights/best.pt \
     --input path/to/images --output path/to/output
 ```
 
-Model weights are not stored in this repository. See `weights/README.md`.
 
 ## Licence and attribution
 
