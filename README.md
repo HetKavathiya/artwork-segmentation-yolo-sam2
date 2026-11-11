@@ -1,4 +1,4 @@
-# Artwork Segmentation & Auto-Crop: YOLO11-seg + Fine-Tuned SAM 2 (Computer Vision Pipeline)
+# Artwork Segmentation & Auto-Crop: YOLO11-seg +  SAM 2 (Computer Vision Pipeline)
 
 **Automatically detect, segment, crop, straighten and background-remove paintings from photographs, using YOLO11 instance segmentation, a Segment Anything Model 2 (SAM 2.1), and classical geometry (perspective correction, ellipse fitting, edge snapping).**
 
@@ -11,28 +11,13 @@ Photos of paintings are hard: they are tilted, cluttered, framed, matted, round,
 
 ## Project demo video
 
-<!--
-HOW TO ADD YOUR VIDEO (pick one, then delete this comment block):
+[![Artwork segmentation demo video](https://img.youtube.com/vi/vGwEnrCEcC4/maxresdefault.jpg)](https://youtu.be/vGwEnrCEcC4)
 
-Option A - upload the MP4 directly (best, plays inside GitHub):
-  1. On github.com, open README.md and click the pencil icon (Edit).
-  2. Drag and drop your .mp4 into the editor (under 100 MB).
-
-
-  3. GitHub inserts a link like https://github.com/user-attachments/assets/xxxx
-     Leave it on its own line, then commit.
-
-Option B - YouTube thumbnail that links to the video:
-  [![Artwork segmentation demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
--->
-
-<!-- PASTE YOUR VIDEO LINK OR THUMBNAIL HERE -->
+Watch the demo on YouTube: https://youtu.be/vGwEnrCEcC4
 
 ---
 
 ## What it does
-
-
 
 - **Detects 4 classes** with a custom-trained YOLO11m-seg model: `artwork_surface`, `canvas_edge`, `frame`, `mat`.
 - **Refines the masks with SAM 2.1**. YOLO provides the prompts (box, positive and negative points); SAM produces the sharper boundary.
@@ -53,7 +38,7 @@ Option B - YouTube thumbnail that links to the video:
 Photo ──► YOLO11-seg (4 classes) ──► prompts (box + points)
                                    │
                                    ▼
-                      Fine-tuned SAM 2.1 mask refinement
+                         SAM 2.1 mask refinement
                                    │
         ┌──────────────────────────┼───────────────────────────┐
         ▼                          ▼                           ▼
@@ -72,7 +57,7 @@ Python · PyTorch · Ultralytics YOLO11 (instance segmentation) · Meta SAM 2.1 
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-username>/artwork-segmentation-yolo-sam2.git
+git clone https://github.com/HetKavathiya/artwork-segmentation-yolo-sam2.git
 cd artwork-segmentation-yolo-sam2
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -111,4 +96,4 @@ I'm a **computer vision and robotics engineer** available for freelance projects
 - LinkedIn: https://www.linkedin.com/in/het-kavathiya-922a692aa
 - Open an issue or discussion on this repository
 
-*Keywords: computer vision freelancer, image segmentation, instance segmentation, YOLO11, SAM 2 fine-tuning, artwork detection, auto crop, perspective correction, background removal, OpenCV, PyTorch, Python, hire computer vision engineer.*
+*Keywords: computer vision freelancer, image segmentation, instance segmentation, YOLO11, SAM 2, artwork detection, auto crop, perspective correction, background removal, OpenCV, PyTorch, Python, hire computer vision engineer.*
