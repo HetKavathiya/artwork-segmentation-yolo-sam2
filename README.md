@@ -1,4 +1,4 @@
-# Artwork Segmentation & Auto-Crop: YOLO11-seg + Fine-Tuned SAM 2 (Computer Vision Pipeline)
+# Artwork Segmentation & Auto-Crop: YOLO11-seg + SAM 2 (Computer Vision Pipeline)
 
 **Automatically detect, segment, crop, straighten and background-remove paintings from photographs, using YOLO11 instance segmentation, a fine-tuned Segment Anything Model 2 (SAM 2.1), and classical geometry (perspective correction, ellipse fitting, edge snapping).**
 
@@ -13,7 +13,7 @@ Photos of paintings are hard: they are tilted, cluttered, framed, matted, round,
 ## What it does
 
 - **Detects 4 classes** with a custom-trained YOLO11m-seg model: `artwork_surface`, `canvas_edge`, `frame`, `mat`.
-- **Refines the masks with SAM 2.1** (fine-tuned on the same dataset). YOLO provides the prompts (box, positive and negative points); SAM produces the sharper boundary.
+- **Refines the masks with SAM 2.1**. YOLO provides the prompts (box, positive and negative points); SAM produces the sharper boundary.
 - **Shape-aware geometry**:
   - rectangles: robust line fitting on each side, sub-pixel edge snapping, aspect-ratio estimation (Zhang–He), homography to a front-facing view;
   - circles and ovals: ellipse refit, no distortion;
@@ -31,7 +31,7 @@ Photos of paintings are hard: they are tilted, cluttered, framed, matted, round,
 Photo ──► YOLO11-seg (4 classes) ──► prompts (box + points)
                                    │
                                    ▼
-                      Fine-tuned SAM 2.1 mask refinement
+                         SAM 2.1 mask refinement
                                    │
         ┌──────────────────────────┼───────────────────────────┐
         ▼                          ▼                           ▼
@@ -46,20 +46,6 @@ Photo ──► YOLO11-seg (4 classes) ──► prompts (box + points)
 ## Tech stack
 
 Python · PyTorch · Ultralytics YOLO11 (instance segmentation) · Meta SAM 2.1 · OpenCV · NumPy · Pillow (+ pillow-heif / pillow-avif) · optional PyMatting
-
-## Repository layout
-
-```
-├── src/
-│   ├── pipeline.py              # end-to-end extraction pipeline
-│   └── sam2_ft_patch.py         # prompts matched to the fine-tuned SAM 2
-├── training/
-│   └── kaggle_sam2_finetune.py  # SAM 2 fine-tuning (runs on Kaggle GPU)
-├── configs/
-│   └── data.yaml                # class names / dataset layout
-├── assets/                      # example images
-└── weights/README.md            # where to download model weights
-```
 
 ## Quick start
 
@@ -78,33 +64,10 @@ python src/pipeline.py --model weights/best.pt \
 
 Model weights are not stored in this repository. See `weights/README.md`.
 
-## Training
-
-1. **YOLO11m-seg**: trained on a 4-class artwork dataset (Roboflow export, Kaggle T4 GPU).
-2. **SAM 2.1 fine-tuning**: `training/kaggle_sam2_finetune.py` trains the mask decoder and prompt encoder with YOLO-style simulated prompts (box jitter, class-aware negative points) and a boundary-weighted loss. It reports raw YOLO vs pretrained SAM vs fine-tuned SAM on held-out images.
-
-## Results
-
-<!-- TODO: fill in after benchmarking on a held-out test set. Do not publish numbers you have not measured. -->
-
-| Metric (held-out test set) | Raw YOLO | YOLO + SAM 2.1 | YOLO + fine-tuned SAM 2.1 |
-|---|---|---|---|
-| Mask IoU | – | – | – |
-| Boundary F1 | – | – | – |
-| Images needing review (%) | – | – | – |
-
-## Known limitations
-
-- Artwork that is the same colour as its background (for example white on white) may have no visible edge. These cases are flagged, not guessed.
-- Aspect ratio after perspective correction is estimated assuming square pixels and a centred principal point, so it is an estimate, not a metric measurement.
-- Circular and oval artwork is not perspective-corrected.
-- Quality flags are heuristics. Verified correctness requires ground-truth masks or human review.
-
 ## Licence and attribution
 
 - Code: <!-- TODO: choose a licence. Ultralytics YOLO is AGPL-3.0, so code that uses it is typically distributed under AGPL-3.0 unless you hold an Ultralytics enterprise licence. -->
 - SAM 2 (Meta): Apache-2.0. Check the exact checkpoint terms.
-- Dataset: *artworkcropper* by hets-workspace-ah6vf on Roboflow Universe, CC BY 4.0: https://universe.roboflow.com/hets-workspace-ah6vf/artworkcropper-9umio/dataset/1
 
 ---
 
@@ -119,11 +82,11 @@ I'm a **computer vision and robotics engineer** available for freelance projects
 - Robotics perception: **ROS**, LiDAR, SLAM, point clouds
 - <!-- Keep only if you offer it: LLM applications (RAG, chatbots, document AI) and vision-language pipelines -->
 
-**Contact**
+## Contact
 
-- Email: <your-email>
-- Upwork: <your-upwork-profile-url>
-- LinkedIn: <your-linkedin-url>
+- Email: kavathiyahet25@gmail.com
+- Upwork: https://www.upwork.com/freelancers/~012293e09d67cf37c7
+- LinkedIn: https://www.linkedin.com/in/het-kavathiya-922a692aa
 - Open an issue or discussion on this repository
 
 *Keywords: computer vision freelancer, image segmentation, instance segmentation, YOLO11, SAM 2 fine-tuning, artwork detection, auto crop, perspective correction, background removal, OpenCV, PyTorch, Python, hire computer vision engineer.*
