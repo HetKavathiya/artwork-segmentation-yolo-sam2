@@ -4,7 +4,7 @@
 
 Photos of paintings are hard: they are tilted, cluttered, framed, matted, round, torn-edged, or the same colour as the wall. This project turns them into clean, front-facing, transparent-background artwork images, with a review flag whenever the result is uncertain.
 
-> **Looking for a computer vision freelancer?** I build custom image segmentation, object detection and document/artwork extraction pipelines. Jump to [Hire me](#hire-me--[freelance-computer-vision--llm-development](https://www.upwork.com/freelancers/~012293e09d67cf37c7)).
+> **Looking for a computer vision freelancer?** I build custom image segmentation, object detection and document/artwork extraction pipelines. Jump to [Hire me](#hire-me--[[https://www.upwork.com/freelancers/~012293e09d67cf37c7]].
 
 <!-- TODO: add a before/after image: ![Before and after](assets/before_after.jpg) -->
 
